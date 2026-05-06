@@ -1,0 +1,73 @@
+{
+  "repo": "palette-core",
+  "language": "Kotlin",
+  "category": "Graphics",
+  "goal": "Quantize palettes and choose contrast-aware swatches.",
+  "review_model": {
+    "terms": [
+      "geometry span",
+      "atlas pressure",
+      "shader drift",
+      "render budget"
+    ],
+    "lanes": [
+      "ship",
+      "watch",
+      "hold"
+    ],
+    "score": "signal * 2 + slack + confidence - drag * 3",
+    "purpose": "surface the domain-specific cases that need the most careful review"
+  },
+  "cases": [
+    {
+      "name": "baseline",
+      "focus": "geometry span",
+      "signal": 62,
+      "slack": 22,
+      "drag": 9,
+      "confidence": 60,
+      "score": 179,
+      "lane": "ship"
+    },
+    {
+      "name": "stress",
+      "focus": "atlas pressure",
+      "signal": 61,
+      "slack": 37,
+      "drag": 13,
+      "confidence": 73,
+      "score": 193,
+      "lane": "ship"
+    },
+    {
+      "name": "edge",
+      "focus": "shader drift",
+      "signal": 79,
+      "slack": 29,
+      "drag": 27,
+      "confidence": 64,
+      "score": 170,
+      "lane": "ship"
+    },
+    {
+      "name": "recovery",
+      "focus": "render budget",
+      "signal": 73,
+      "slack": 33,
+      "drag": 11,
+      "confidence": 74,
+      "score": 220,
+      "lane": "ship"
+    },
+    {
+      "name": "stale",
+      "focus": "geometry span",
+      "signal": 80,
+      "slack": 25,
+      "drag": 20,
+      "confidence": 52,
+      "score": 177,
+      "lane": "ship"
+    }
+  ]
+}
