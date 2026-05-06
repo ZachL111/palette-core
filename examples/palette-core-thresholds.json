@@ -1,0 +1,17 @@
+{
+  "repo": "palette-core",
+  "thresholds": {
+    "signal": 3,
+    "slack": 1,
+    "confidence": 2,
+    "drag": 3,
+    "ship": 197,
+    "watch": 110
+  },
+  "terms": [
+    "geometry span",
+    "atlas pressure",
+    "shader drift",
+    "render budget"
+  ]
+}
